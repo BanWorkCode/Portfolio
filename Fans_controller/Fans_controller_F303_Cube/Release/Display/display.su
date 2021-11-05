@@ -1,0 +1,8 @@
+display.c:195:6:DISPLAY_ShowMenu	48	static
+display.c:206:17:DISPLAY_GoesTo	0	static
+display.c:213:17:DISPLAY_GoesToAndShowInfo	0	static
+display.c:221:17:DISPLAY_GoesToAndNotShowTime	0	static
+display.c:229:17:DISPLAY_GoesToAndFillTime	4	static
+display.c:240:17:DISPLAY_GoesToAndFillDate	4	static
+display.c:250:17:DISPLAY_GoesToAndFillStartDay	0	static
+display.c:260:17:DISPLAY_GoesToAndFillEndDay	0	static

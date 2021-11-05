@@ -1,0 +1,4 @@
+menu.h:21:2:Menu::Menu(uint8_t, const char*, Menu*)	24	static
+menu.cpp:16:9:uint8_t MENU_GeVId()	4	static
+menu.cpp:19:1:void __static_initialization_and_destruction_0(int, int)	24	static
+menu.cpp:19:1:cpp)	8	static

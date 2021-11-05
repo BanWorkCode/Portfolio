@@ -1,0 +1,2 @@
+testPlus.h:24:5:int testClass::GetWeight()	16	static
+testPlus.cpp:17:5:int func_callback()	8	static

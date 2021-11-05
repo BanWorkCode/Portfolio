@@ -1,0 +1,4 @@
+freertos.c:138:6:ScreenAndButtonTask	8	static
+freertos.c:174:6:FansTask	40	static
+freertos.c:82:6:vApplicationGetIdleTaskMemory	4	static
+freertos.c:95:6:MX_FREERTOS_Init	72	static

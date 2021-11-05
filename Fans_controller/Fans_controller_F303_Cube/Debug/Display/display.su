@@ -1,0 +1,12 @@
+display.c:21:13:DISPLAY_ShowTopRow	24	static
+display.c:49:13:DISPLAY_FillInverseColor	16	static
+display.c:61:13:DISPLAY_ShowBottomRow	32	static
+display.c:127:13:DISPLAY_ShowBody	48	static
+display.c:195:6:DISPLAY_ShowMenu	8	static
+display.c:206:17:DISPLAY_GoesTo	16	static
+display.c:213:17:DISPLAY_GoesToAndShowInfo	16	static
+display.c:221:17:DISPLAY_GoesToAndNotShowTime	16	static
+display.c:229:17:DISPLAY_GoesToAndFillTime	16	static
+display.c:240:17:DISPLAY_GoesToAndFillDate	16	static
+display.c:250:17:DISPLAY_GoesToAndFillStartDay	16	static
+display.c:260:17:DISPLAY_GoesToAndFillEndDay	16	static

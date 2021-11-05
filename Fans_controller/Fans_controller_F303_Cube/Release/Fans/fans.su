@@ -1,0 +1,13 @@
+fans.c:26:6:FANS_UpdateCyrrentDays	8	static
+fans.c:45:17:FANS_Toggle	0	static
+fans.c:53:17:FANS_UpdateFirstDay	4	static
+fans.c:64:17:FANS_FillProgram	32	static
+fans.c:87:17:FANS_ResetSettings	24	static
+fans.c:134:17:FANS_SetTime	8	static
+fans.c:165:6:FANS_CalculationDate	20	static
+fans.c:144:17:FANS_SetDate	16	static
+fans.c:197:17:FANS_SetStartDayTime	12	static
+fans.c:208:17:FANS_SetEndDayTime	12	static
+fans.c:220:17:FANS_SetPeriod	0	static
+fans.c:229:6:HAL_RTC_AlarmAEventCallback	0	static
+fans.c:241:6:FANS_SetSpeed	40	static
