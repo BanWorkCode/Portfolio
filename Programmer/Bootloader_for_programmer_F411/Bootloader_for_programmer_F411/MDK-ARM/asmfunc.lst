@@ -1,0 +1,48 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000         branth
+    3 00000000                 EXPORT           branth
+    4 00000000 6801            LDR              R1, [R0]
+    5 00000002 F381 8808       MSR              MSP, R1
+    6 00000006 6841            LDR              R1, [R0, #4]
+    7 00000008 4708            BX               R1
+    8 0000000A         ;MSR r15, R1
+    9 0000000A         
+   10 0000000A                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=bootloader_for_programmer_f411\asmfunc.d -obootloader_for_pr
+ogrammer_f411\asmfunc.o -I.\RTE\_Bootloader_for_programmer_F411 -ID:\Users\Maxi
+m\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -ID:\Users\Maxim\A
+ppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F
+4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA
+ 529" --predefine="_RTE_ SETA 1" --predefine="STM32F411xE SETA 1" --list=asmfun
+c.lst asmFunc.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file asmFunc.s
+   Uses
+      None
+Comment: .text unused
+branth 00000000
+
+Symbol: branth
+   Definitions
+      At line 2 in file asmFunc.s
+   Uses
+      At line 3 in file asmFunc.s
+Comment: branth used once
+2 symbols
+337 symbols in table

@@ -1,0 +1,203 @@
+#include "main.h"
+#include "Ftp.h"
+#include "string.h"
+#include "displayMenu.h"
+#include "cmsis_os.h"
+#include <stdlib.h>
+#include "saveSetting.h"
+
+extern char g_rowOfListForScreen[MAX_NUMBER_OF_CATALOG_ITEMS][MAX_LENGTH_OF_STRING_IN_CATALOG];//Массив строк для вывода списка на экран
+extern uint16_t returnedNumberOfItems;
+extern uint16_t g_currentItemOfList;
+extern enum TypeList typeList;
+extern char* inputDestination;
+extern char inputField[LENGHT_INPUT_FIELD];
+
+
+//DATAFTP dataFTP[NUMBER_ITEMS_DATAFTP]={{"192.168.1.224","21","maxim","maxim"},{"192.168.1.172","21","maxim","maxim"}};
+
+//UNIONFTP unionFtp={{{"192.168.1.224","21","maxim","maxim"},{"192.168.1.172","21","maxim","maxim"}}};
+UNIONFTP unionFtp;
+
+
+uint16_t selectedFtpServer = 0xFFFF;
+
+
+
+
+
+
+
+void SelectFtpServer (void)
+{
+  for(uint16_t i=0; i<NUMBER_ITEMS_DATAFTP; i++)
+    {
+      if (strcmp(unionFtp.dataFTP[i].address, g_rowOfListForScreen[g_currentItemOfList])==0)
+        {
+          selectedFtpServer = i;
+          break;
+        }
+    }
+}
+
+
+DATAFTP* GetFtpSettingSelectedServer (void)
+{
+  return &unionFtp.dataFTP[selectedFtpServer];
+}
+
+
+
+
+
+
+
+
+
+
+//FTP LIST-----------------------------------------------------------
+_Bool WriteFtpListToScreenList(void)
+{
+  uint16_t i=0;
+  while (unionFtp.dataFTP[i].address[0] !=0x00)
+    {
+      strcpy(g_rowOfListForScreen[i], unionFtp.dataFTP[i].address);
+      i++;
+    }
+  returnedNumberOfItems =i;
+  return 0;
+}
+
+void* ShowFtpListESP8266(void* currentItem)
+{
+  WINDOW = WAITING;
+  ReadFtpFromFlash();
+  if (WriteFtpListToScreenList())
+    {
+      infoMessage = "No FTP servers available";
+      WINDOW = INFO_WINDOW;
+    }
+  else
+    {
+      typeList = FTP_LIST;
+      g_currentItemOfList =0;
+      WINDOW = LIST;
+    }
+  return 	currentItem;
+}
+
+
+
+void* AddNewFtpAdress(void* currentItem)
+{
+//				if (selectedFtpServer != 0xFFFF){
+//			infoMessage = "You have a procedure started";
+//			WINDOW = INFO_WINDOW;
+//			return	currentItem;
+//			}
+  //ищем свободное место в массиве dataFTP
+  if (selectedFtpServer == 0xFFFF)
+    {
+      for(uint16_t i=0; i<NUMBER_ITEMS_DATAFTP; i++)
+        {
+          if (unionFtp.dataFTP[i].address[0]==0x00)
+            {
+              selectedFtpServer =i;
+              break;
+            }
+        }
+      if (selectedFtpServer == 0xFFFF)
+        {
+          infoMessage = "No free memory for new FTP record!";
+          WINDOW = INFO_WINDOW;
+          return	currentItem;
+        }
+    }
+  inputDestination = unionFtp.dataFTP[selectedFtpServer].address;
+  //ClearInputField();
+  strcpy(inputField, inputDestination);
+  previousWindow = MENU;
+  //infoMessage = "Please enter the address of the new FTP server! Press the button \"Enter\"";
+  WINDOW = KEYBOARD;
+  return 	currentItem;
+}
+
+
+void* AddNewFtpPort(void* currentItem)
+{
+  //ищем свободное место в массиве dataFTP
+  if (selectedFtpServer == 0xFFFF)
+    {
+      infoMessage = "first enter the address";
+      WINDOW = INFO_WINDOW;
+      return	currentItem;
+    }
+  inputDestination = unionFtp.dataFTP[selectedFtpServer].port;
+  //ClearInputField();
+  strcpy(inputField, inputDestination);
+  previousWindow = MENU;
+  WINDOW = KEYBOARD;
+  return 	currentItem;
+}
+
+void* AddNewFtpLogin(void* currentItem)
+{
+  //ищем свободное место в массиве dataFTP
+  if (selectedFtpServer == 0xFFFF)
+    {
+      infoMessage = "first enter the address";
+      WINDOW = INFO_WINDOW;
+      return	currentItem;
+    }
+  inputDestination = unionFtp.dataFTP[selectedFtpServer].login;
+  //ClearInputField();
+  strcpy(inputField, inputDestination);
+  previousWindow = MENU;
+  WINDOW = KEYBOARD;
+  return 	currentItem;
+}
+
+void* AddNewFtpPassword(void* currentItem)
+{
+  //ищем свободное место в массиве dataFTP
+  if (selectedFtpServer == 0xFFFF)
+    {
+      infoMessage = "first enter the address";
+      WINDOW = INFO_WINDOW;
+      return	currentItem;
+    }
+  inputDestination = unionFtp.dataFTP[selectedFtpServer].password;
+  //ClearInputField();
+  strcpy(inputField, inputDestination);
+  previousWindow = MENU;
+  WINDOW = KEYBOARD;
+  return 	currentItem;
+}
+
+extern menuItem* selectedMenuItem;
+void* ConfirmInputNewFtpServer(void* currentItem)
+{
+  previousWindow = MENU;
+  if(selectedFtpServer !=0xFFFF && unionFtp.dataFTP[selectedFtpServer].address[0]!=0x00 &&\
+      unionFtp.dataFTP[selectedFtpServer].port[0]!=0x00)
+    {
+      selectedFtpServer = 0xFFFF;
+//selectedMenuItem = &Boot_MAIN;
+//selectedMenuItem = selectedMenuItem->Parent;
+      if (SaveData())
+        {
+//ошибка
+          infoMessage = "Error, settings not saved!";
+          WINDOW = INFO_WINDOW;
+          return currentItem;
+        }
+      WINDOW = MENU;
+    }
+  else
+    {
+      infoMessage = "Please enter adress and port";
+      WINDOW = INFO_WINDOW;
+      return currentItem;
+    }
+  return selectedMenuItem->Parent;
+}

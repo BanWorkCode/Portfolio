@@ -1,0 +1,36 @@
+#ifndef ftp_H
+#define ftp_H
+
+#include <stdint.h>
+
+#define NUMBER_ITEMS_DATAFTP 10U
+#define SIZE_STRING_ADDRESS 256U
+#define SIZE_STRING_PORT 8U
+#define SIZE_STRING_LOGIN 256U
+#define SIZE_STRING_PASSWORD 256U
+#define SIZE_UNION_FTP (SIZE_STRING_ADDRESS+SIZE_STRING_PORT+SIZE_STRING_LOGIN+SIZE_STRING_PASSWORD)*NUMBER_ITEMS_DATAFTP
+
+
+
+typedef struct {
+char address[SIZE_STRING_ADDRESS];
+char port[SIZE_STRING_PORT];	
+char login[SIZE_STRING_LOGIN];
+char password[SIZE_STRING_PASSWORD];
+} FTP_ServerSettings_t;
+
+typedef union {
+FTP_ServerSettings_t dataFTP[NUMBER_ITEMS_DATAFTP];
+uint32_t data32[SIZE_UNION_FTP/4];
+} FTP_UNION_t;
+
+void* FTP_AddNewFtpAdress(void* currentItem);
+void* FTP_AddNewFtpPort(void* currentItem);
+void* FTP_AddNewFtpLogin(void* currentItem);
+void* FTP_AddNewFtpPassword(void* currentItem);
+void* FTP_ConfirmInputNewFtpServer(void* currentItem);
+void FTP_SelectFtpServer (void);
+static _Bool FTP_WriteFtpListToScreenList ( void );
+FTP_ServerSettings_t* FTP_GetSettingSelectedFtpServer (void);
+
+#endif
