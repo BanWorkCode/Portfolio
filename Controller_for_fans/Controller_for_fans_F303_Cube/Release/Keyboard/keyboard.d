@@ -30,9 +30,9 @@ Keyboard/keyboard.o: ../Keyboard/keyboard.c ../Inc/main.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h \
  ../Keyboard/keyboard.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/ssd1306.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/fonts.h
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/ssd1306.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/fonts.h
 
 ../Inc/main.h:
 
@@ -98,8 +98,8 @@ Keyboard/keyboard.o: ../Keyboard/keyboard.c ../Inc/main.h \
 
 ../Keyboard/keyboard.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/ssd1306.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/ssd1306.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/fonts.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/fonts.h:

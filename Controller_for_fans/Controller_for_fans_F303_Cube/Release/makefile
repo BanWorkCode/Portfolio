@@ -71,8 +71,8 @@ all: main-build
 main-build: Fans_controller_F303_Cube.elf secondary-outputs
 
 # Tool invocations
-Fans_controller_F303_Cube.elf: $(OBJS) $(USER_OBJS) C:\Users\Maxim\Desktop\Fans_controller_F303_Cube\STM32F303CCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Fans_controller_F303_Cube.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Maxim\Desktop\Fans_controller_F303_Cube\STM32F303CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Fans_controller_F303_Cube.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Fans_controller_F303_Cube.elf: $(OBJS) $(USER_OBJS) Z:\Portfolio\Controller_for_fans\Controller_for_fans_F303_Cube\STM32F303CCTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Fans_controller_F303_Cube.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"Z:\Portfolio\Controller_for_fans\Controller_for_fans_F303_Cube\STM32F303CCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Fans_controller_F303_Cube.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

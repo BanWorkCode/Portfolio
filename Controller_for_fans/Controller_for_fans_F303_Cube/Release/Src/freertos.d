@@ -46,15 +46,15 @@ Src/freertos.o: ../Src/freertos.c ../Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/ssd1306.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/fonts.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/ssd1306.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/fonts.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h \
  ../Inc/rtc.h ../Inc/main.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/StoringSettings/storingSettings.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Display/display.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Fans/fans.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/StoringSettings/storingSettings.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Display/display.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Fans/fans.h \
  ../Inc/iwdg.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Keyboard/keyboard.h
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Keyboard/keyboard.h
 
 ../Inc/main.h:
 
@@ -152,22 +152,22 @@ Src/freertos.o: ../Src/freertos.c ../Inc/main.h \
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/ssd1306.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/ssd1306.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/fonts.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/fonts.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h:
 
 ../Inc/rtc.h:
 
 ../Inc/main.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/StoringSettings/storingSettings.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/StoringSettings/storingSettings.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Display/display.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Display/display.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Fans/fans.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Fans/fans.h:
 
 ../Inc/iwdg.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Keyboard/keyboard.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Keyboard/keyboard.h:

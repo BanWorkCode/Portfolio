@@ -30,9 +30,9 @@ StoringSettings/storingSettings.o: ../StoringSettings/storingSettings.c \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rtc_ex.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Fans/fans.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/StoringSettings/storingSettings.h
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Fans/fans.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/StoringSettings/storingSettings.h
 
 ../StoringSettings/storingSettings.h:
 
@@ -98,8 +98,8 @@ StoringSettings/storingSettings.o: ../StoringSettings/storingSettings.c \
 
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Fans/fans.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Fans/fans.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/StoringSettings/storingSettings.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/StoringSettings/storingSettings.h:

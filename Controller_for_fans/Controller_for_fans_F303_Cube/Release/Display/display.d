@@ -1,5 +1,5 @@
 Display/display.o: ../Display/display.c ../Display/display.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h \
  ../Inc/main.h ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h \
  ../Inc/stm32f3xx_hal_conf.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h \
@@ -30,14 +30,14 @@ Display/display.o: ../Display/display.c ../Display/display.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rtc_ex.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/ssd1306.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/fonts.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Fans/fans.h \
- C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/StoringSettings/storingSettings.h
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/ssd1306.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/fonts.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Fans/fans.h \
+ Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/StoringSettings/storingSettings.h
 
 ../Display/display.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/fillMenu/fillMenu.h:
 
 ../Inc/main.h:
 
@@ -101,10 +101,10 @@ C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/fillMenu/fillMenu.h:
 
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/ssd1306.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/ssd1306.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/ssd1306/fonts.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/ssd1306/fonts.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/Fans/fans.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/Fans/fans.h:
 
-C:/Users/Maxim/Desktop/Fans_controller_F303_Cube/StoringSettings/storingSettings.h:
+Z:/Portfolio/Controller_for_fans/Controller_for_fans_F303_Cube/StoringSettings/storingSettings.h:
